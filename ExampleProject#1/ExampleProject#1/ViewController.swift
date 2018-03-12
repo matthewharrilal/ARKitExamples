@@ -82,8 +82,10 @@ class ViewController: UIViewController, ARSCNViewDelegate {
         // We are setting the geometry of the ballnode to be the shape of the ball
         let myBallNode = SCNNode(geometry: myBallShape)
         
+        
         // Setting the ballNodes position to the position of the tap when the user taps on the ball
         myBallNode.position = postion
+        myBallNode.geometry?.firstMaterial?.diffuse.contents = UIImage(imageLiteralResourceName: "logo")
     
         
         // Adds nodes to an array allows us to have multiple nodes on the screen

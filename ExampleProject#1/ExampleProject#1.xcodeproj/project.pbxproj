@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C150D4720570D9200ACD396 /* logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 1C150D4620570D9200ACD396 /* logo.png */; };
+		1C150D49205711AE00ACD396 /* IMG_0744.JPG in Resources */ = {isa = PBXBuildFile; fileRef = 1C150D48205711AE00ACD396 /* IMG_0744.JPG */; };
 		1C7E1F2C2056DFB9000C8A0B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1F2B2056DFB9000C8A0B /* AppDelegate.swift */; };
 		1C7E1F2E2056DFB9000C8A0B /* art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 1C7E1F2D2056DFB9000C8A0B /* art.scnassets */; };
 		1C7E1F302056DFB9000C8A0B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C7E1F2F2056DFB9000C8A0B /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C150D4620570D9200ACD396 /* logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = logo.png; sourceTree = "<group>"; };
+		1C150D48205711AE00ACD396 /* IMG_0744.JPG */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_0744.JPG; sourceTree = "<group>"; };
 		1C7E1F282056DFB9000C8A0B /* ExampleProject#1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "ExampleProject#1.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		1C7E1F2B2056DFB9000C8A0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1C7E1F2D2056DFB9000C8A0B /* art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = art.scnassets; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				1C7E1F2B2056DFB9000C8A0B /* AppDelegate.swift */,
 				1C7E1F2D2056DFB9000C8A0B /* art.scnassets */,
 				1C7E1F2F2056DFB9000C8A0B /* ViewController.swift */,
+				1C150D48205711AE00ACD396 /* IMG_0744.JPG */,
+				1C150D4620570D9200ACD396 /* logo.png */,
 				1C7E1F312056DFB9000C8A0B /* Main.storyboard */,
 				1C7E1F342056DFB9000C8A0B /* Assets.xcassets */,
 				1C7E1F362056DFB9000C8A0B /* LaunchScreen.storyboard */,
@@ -126,7 +132,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1C150D49205711AE00ACD396 /* IMG_0744.JPG in Resources */,
 				1C7E1F2E2056DFB9000C8A0B /* art.scnassets in Resources */,
+				1C150D4720570D9200ACD396 /* logo.png in Resources */,
 				1C7E1F382056DFB9000C8A0B /* LaunchScreen.storyboard in Resources */,
 				1C7E1F352056DFB9000C8A0B /* Assets.xcassets in Resources */,
 				1C7E1F332056DFB9000C8A0B /* Main.storyboard in Resources */,
