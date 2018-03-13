@@ -77,15 +77,16 @@ class ViewController: UIViewController, ARSCNViewDelegate {
     
     func createBall(postion: SCNVector3) {
         // This function is going to create our ball
-        let myBallShape = SCNSphere(radius: 0.01)
+        let myBallShape = SCNSphere(radius: 0.06)
         
         // We are setting the geometry of the ballnode to be the shape of the ball
         let myBallNode = SCNNode(geometry: myBallShape)
         
         
+        
         // Setting the ballNodes position to the position of the tap when the user taps on the ball
         myBallNode.position = postion
-        myBallNode.geometry?.firstMaterial?.diffuse.contents = UIImage(imageLiteralResourceName: "logo")
+        myBallNode.geometry?.firstMaterial?.diffuse.contents = UIColor.cyan
     
         
         // Adds nodes to an array allows us to have multiple nodes on the screen
