@@ -12,6 +12,8 @@ import AVKit
 import Vision
 
 class SmartCameraViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+    @IBOutlet weak var itemNameLabel: UILabel!
+    @IBOutlet weak var probabiltyOfItemLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -40,25 +42,28 @@ class SmartCameraViewController: UIViewController, AVCaptureVideoDataOutputSampl
         
     }
     
-    func captureOutput(_ output: AVCaptureOutput, didDrop sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
         guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else {return}
         
         guard let model = try? VNCoreMLModel(for: Resnet50().model) else {return}
         let request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
             
             // perhaps check the error
-            print(finishedRequest.results)
             
             guard let results = finishedRequest.results as? [VNClassificationObservation] else {return}
             
             guard let firstObservation = results.first else {return}
             
             print(firstObservation.identifier, firstObservation.confidence)
+            
+            DispatchQueue.main.async {
+                self.itemNameLabel.text = firstObservation.identifier
+                self.probabiltyOfItemLabel.text = String(firstObservation.confidence)
+            }
         }
         
-       try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
+        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
-    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
     }
